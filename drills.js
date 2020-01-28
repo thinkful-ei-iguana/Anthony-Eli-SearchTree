@@ -16,8 +16,6 @@ const BinarySearchTree = require('./bst');
                         
 */
 
-// 2
-
 /*
 
                     E
@@ -34,7 +32,7 @@ const BinarySearchTree = require('./bst');
 
 */
 
-// 3
+// 2
 
 /*
 
@@ -54,7 +52,7 @@ const BinarySearchTree = require('./bst');
 
 */
 
-// 4
+// 3
 
 const drill = () => {
   let tree = new BinarySearchTree();
@@ -71,4 +69,15 @@ const drill = () => {
   return tree;
 };
 
-console.log(drill());
+// console.log(drill());
+
+// 4
+
+function tree(t) {
+  if (!t) {
+    return 0; // if theres no argument val then it returns '0'
+  }
+  return tree(t.left) + t.value + tree(t.right); // recusion function that gets the sum of all the tree's values
+}
+
+console.log(tree(drill()));
