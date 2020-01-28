@@ -65,7 +65,7 @@ const drill = () => {
   tree.insert(2, 2);
   tree.insert(5, 5);
   tree.insert(7, 7);
-
+  console.log(tree.height());
   return tree;
 };
 
@@ -81,3 +81,6 @@ function tree(t) {
 }
 
 console.log(tree(drill()));
+
+// 5
+// Line 68

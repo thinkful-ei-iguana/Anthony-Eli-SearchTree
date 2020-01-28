@@ -7,6 +7,17 @@ class BinarySearchTree {
     this.right = null;
   }
 
+  height = input => {
+    let left = 0;
+    let right = 0;
+
+    if (this.left != null) left = this.left.height();
+
+    if (this.right != null) right = this.right.height();
+
+    return 1 + Math.max(left, right);
+  };
+
   insert(key, value) {
     if (this.key == null) {
       this.key = key;
